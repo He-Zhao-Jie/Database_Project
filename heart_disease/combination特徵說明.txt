@@ -1,0 +1,6 @@
+1.age
+2.sex
+3.cp = chest pain (0 = no, 1 = yes)
+4.thalach = maximum heart rate achieved 
+5.trestbps = resting blood pressure in mm Hg on admission to the hospital
+6.target = heat disease (0 = no, 1 = yes)

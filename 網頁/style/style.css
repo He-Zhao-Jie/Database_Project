@@ -1,0 +1,147 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    font-family: 'Microsoft JhengHei';
+}
+.top{
+    width: 100%;
+    height: 42%;
+    background-color:#C95D63;
+    z-index: -2;
+    padding-top: 3%;
+}
+.top .content{
+    margin: 0 8%;
+    display: flex;
+    align-items: flex-end;
+}
+.overview{
+    padding: 8px 25px;
+    border-radius: 30px;
+    color: #C95D63;
+    background-color: #fff;
+    border: none;
+    font-size: 28px;
+    font-weight: 600;
+}
+.other{
+    margin-left: 15px;
+    padding: 5px 16px;
+    border-radius: 35px;
+    color: #fff;
+    background-color: #C95D63;
+    border: 2px solid #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .5s linear;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.other:hover{
+    color: #C95D63;
+}
+.other::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff;
+    transition: transform .5s linear;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    border-radius: 35px;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.other:hover::before{
+    transform: scaleX(1);
+}
+
+a{
+    text-decoration: none;
+}
+
+.under{
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    margin: 10% 8%;
+    width: 84%;
+    box-shadow:1px 1px 5px  #888888;
+    border-radius: 25px;
+}
+.under .content{
+    margin: 3% 3.5%;
+}
+.flexbox{
+    display: flex;
+}
+.topicwd{
+    padding: 0 20px 5px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.focus{
+    color: #C95D63;
+    position: relative;
+    border-bottom: 2px solid #C95D63;
+}
+
+.unfocus{
+    color: #F5E0E1;
+    position: relative;
+}
+.tablebox{
+    margin-top: 30px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+table th{
+    background-color: #C95D63;
+    color: #fff;
+    text-align: left;
+}
+tr th, tr td{
+    padding: 8px 12px;
+}
+tr td{
+    border-bottom: #ddd 1px solid;
+    font-size: 16px;
+}
+tr:nth-of-type(odd){
+    background-color: #f3f3f3;
+}
+tr:last-of-type{
+    border-bottom: 2px solid #C95D63;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+}
+
+
+.fleximg{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 5%;   
+}
+.fleximg .imgbox{
+    width: 45%;
+}
+.fleximg .imgbox img{
+    width: 100%;
+}

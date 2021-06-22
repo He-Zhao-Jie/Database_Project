@@ -1,0 +1,30 @@
+UPDATE `table 5` SET Disease = 0 WHERE disease = -1;
+UPDATE `table 1` SET target = 0 WHERE target=1;
+UPDATE `table 1` SET target = 1 WHERE target=2;
+UPDATE `table 1` SET cp = 1 WHERE cp>0;
+UPDATE `table 2` SET cp = 1 WHERE cp>0;
+UPDATE `table 3` SET cp = 1 WHERE cp>0;
+UPDATE `table 4` SET cp = 1 WHERE cp>0;
+CREATE TABLE combination(
+	age int(2),
+	sex int(1),
+    cp int(1),
+    thalach int(3),
+    trestbps int(3),
+    target int(1)
+);
+INSERT INTO combination
+SELECT age, sex ,cp,thalach , trestbps ,target
+FROM `table 1`;
+INSERT INTO combination
+SELECT age, sex ,cp,thalach , trestbps ,target
+FROM `table 2`;
+INSERT INTO combination
+SELECT age, sex ,cp,thalach , trestbps ,target
+FROM `table 3`;
+INSERT INTO combination
+SELECT age, sex ,cp,thalach , trestbps ,target
+FROM `table 4`;
+INSERT INTO combination
+SELECT age, sex ,ind_non_ang_pain,Max_heart_rate , resting_BP ,Disease
+FROM `table 5`;

@@ -1,0 +1,156 @@
+/*form*/
+.form{
+    display: flex;
+    padding-top: 30px;
+}
+.formbox{
+    width: 50%;
+}
+.question:not(:first-of-type){
+    margin: 35px 0;
+}
+.question{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f5c5c8;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 40px;
+}
+.predbtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.predict{
+    margin: 0 auto;
+    background-color: #f5c5c8;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+.predict:hover{
+    background-color: #c95d63;
+    color: #fff;
+    transform: scale(1.1);
+    transition: .5s;
+}
+.option{
+    position: relative;
+    width: 75%;
+    height: 100%;
+}
+input[type="radio"]{
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type="radio"]:nth-child(1){
+    top: 0;
+    left: 0;
+}
+input[type="radio"]:nth-child(2){
+    top: 0;
+    left: 30%;
+}
+input[type="radio"]:nth-child(3){
+    top: 0;
+    left: 50%;
+}
+input[type="radio"]::before{
+    font-size: 1.1rem;
+    padding: 7px 15px;
+    font-weight: 600;
+    border-radius: 7px;
+    color: #f5c5c8;
+    cursor: pointer;
+}
+input[type="radio"]:nth-child(1)::before{
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+input[type="radio"]:nth-child(2)::before{
+    top: 0;
+    left: 30%;
+    transition: .3s;
+}
+input[type="radio"]:nth-child(3)::before{
+    top: 0;
+    left: 50%;
+    transition: .3s;
+}
+input[type="radio"]:checked::before{
+    color: #fff;
+    background-color: #c95d63;
+}
+.labelcheck{
+    color: #c95d63;
+    transition: .3s;
+}
+.valueavail{
+    color: #c95d63;
+}
+.question input[type="number"]{
+    margin-right: 25px;
+    width: 65%;
+    height: 30px;
+    border-radius: 7px;
+    color: #fff;
+    outline: none;
+    padding: 0 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.question:focus-within .label{
+    color: #c95d63;
+    transition: .3s;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.question input[type="number"]:focus{
+    background-color: #c95d63;
+    transition: .3s;
+}
+.sex input[type="radio"]:nth-child(1)::before{
+    content: "男生";
+}
+.sex input[type="radio"]:nth-child(2)::before{
+    content: "女生";
+}
+.exer input[type="radio"]:nth-child(1)::before,
+.heart input[type="radio"]:nth-child(1)::before,
+.smoke input[type="radio"]:nth-child(2)::before,
+.diabete input[type="radio"]:nth-child(1)::before{
+    content: "有";
+}
+.exer input[type="radio"]:nth-child(3)::before,
+.heart input[type="radio"]:nth-child(2)::before,
+.smoke input[type="radio"]:nth-child(3)::before,
+.diabete input[type="radio"]:nth-child(2)::before{
+    content: "無";
+}
+.smoke input[type="radio"]:nth-child(1)::before{
+    content: "已戒菸";
+}
+.exer input[type="radio"]:nth-child(2)::before{
+    content: "少";
+}
+.exer input[type="radio"]:nth-child(2){
+    left: 25%;
+}
+.test{
+    background-color: #f5c5c8;
+}
+.inputvail{
+    background-color: #c95d63;
+}
